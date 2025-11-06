@@ -1,7 +1,8 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// https://vite.dev/config/
+// ⚙️ IMPORTANTE: cambia el base con el nombre de tu repo
 export default defineConfig({
+  base: '/cartita/',
   plugins: [react()],
 })
