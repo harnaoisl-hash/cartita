@@ -1,0 +1,89 @@
+/* === LOGIN STYLES === */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #ffb6c1, #ffe4e1);
+}
+
+/* Contenedor general: usa flex para centrar en toda la pantalla */
+.login-container {
+  display: flex;
+  justify-content: center;   /* centra horizontal */
+  align-items: center;       /* centra vertical */
+  height: 100vh;             /* ocupa toda la altura de la pantalla */
+  width: 100vw;              /* ocupa todo el ancho */
+}
+
+/* Tarjeta */
+.login-card {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  padding: 2.5rem;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+}
+
+/* Título */
+.login-card h1 {
+  color: #e91e63;
+  margin-bottom: 1.5rem;
+  line-height: 1.3;
+  font-size: 1.8rem;
+}
+
+/* Etiquetas */
+label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: 600;
+  color: #444;
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+/* Campos */
+input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  text-align: center;
+  margin-top: 0.4rem;
+  background: #fff;
+  color: #333;
+  font-size: 1rem;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+input:focus {
+  outline: none;
+  border-color: #e91e63;
+  box-shadow: 0 0 5px rgba(233, 30, 99, 0.4);
+}
+
+/* Botón */
+button {
+  margin-top: 1.5rem;
+  background: #e91e63;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #c2185b;
+}
+
+/* Mensaje de error */
+.error {
+  color: red;
+  margin-top: 1rem;
+}

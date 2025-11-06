@@ -1,0 +1,207 @@
+body {
+  margin: 0;
+  background: linear-gradient(135deg, #ffd6e7, #ffebef);
+  overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
+}
+
+/* HEADER */
+.header {
+  background: #f06292;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  padding: 12px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+/* CONTENEDOR CENTRAL */
+.carta-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  text-align: center;
+  padding-top: 90px; /* espacio debajo del header */
+}
+
+.contenido {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* IMÁGENES */
+.carta-img {
+  width: 120px;
+  height: 120px;
+  margin: 20px;
+  transition: transform 0.6s ease;
+  transform-style: preserve-3d;
+}
+.carta-img:hover {
+  transform: scale(1.1);
+}
+
+/* BOTÓN */
+.boton {
+  background: #e91e63;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+.boton:hover {
+  background: #ad1457;
+  transform: scale(1.05);
+}
+
+/* MENSAJE CON MARCO */
+.mensaje-contenedor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.marco {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+  border: 2px solid rgba(255, 105, 180, 0.5);
+  padding: 1.5rem 2rem;
+  max-width: 480px;
+  text-align: justify;
+  line-height: 1.6;
+  font-size: 1rem;
+  color: #4a4a4a;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6px);
+  position: relative;
+  transition: all 0.4s ease;
+}
+
+.marco::before {
+  content: "💞";
+  position: absolute;
+  top: -15px;
+  left: 20px;
+  font-size: 1.5rem;
+}
+
+.marco::after {
+  content: "💞";
+  position: absolute;
+  bottom: -15px;
+  right: 20px;
+  font-size: 1.5rem;
+}
+
+.marco:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 30px rgba(233, 30, 99, 0.2);
+}
+
+/* DEDICATORIA */
+.dedicatoria {
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #e91e63;
+  opacity: 0;
+  animation: aparecer 2s ease forwards;
+  text-align: center;
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* CORAZONES */
+.heart {
+  position: fixed;
+  bottom: -20px;
+  font-size: 1.5rem;
+  animation: subir 6s linear infinite;
+  z-index: 1;
+}
+
+@keyframes subir {
+  from {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-100vh) scale(0.5);
+    opacity: 0;
+  }
+}
+
+/* GALERÍA */
+.galeria {
+  margin-top: 3rem;
+  text-align: center;
+  width: 90%;
+  max-width: 800px;
+}
+
+.galeria h2 {
+  color: #e91e63;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.fotos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  justify-items: center;
+}
+
+.foto {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+.foto:hover {
+  transform: scale(1.05);
+}
+.foto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
+}
+.foto:hover img {
+  transform: scale(1.08);
+  box-shadow: 0 6px 20px rgba(233, 30, 99, 0.4);
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .marco {
+    max-width: 90%;
+    font-size: 0.95rem;
+  }
+  .header {
+    font-size: 0.9rem;
+  }
+}
